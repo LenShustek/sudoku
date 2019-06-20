@@ -3,7 +3,7 @@
 
    Partially filled-out input boards are either compiled into the
    program, or are read from the standard input file as 9 lines,
-   each with 9 characters characters that are the digits 1-9, or blank.
+   each with 9 characters that are the digits 1-9, or blank.
    
    A typical invocation from the command line might be:
        sudoku  <test.txt
