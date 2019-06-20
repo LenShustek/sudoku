@@ -1,14 +1,16 @@
 
-   Solve the classic 9x9 Sudoku puzzle,
+    Solve the classic 9x9 Sudoku puzzle
 
-   Boards are either compiled in the program, or read from standard
-   input as 9 lines that have 9 characters: digits 1-9, or blank.
+   Partially filled-out input boards are either compiled into the
+   program, or are read from the standard input file as 9 lines,
+   each with 9 characters characters that are the digits 1-9, or blank.
    
    A typical invocation from the command line might be:
        sudoku  <test.txt
 
-   It finds all possible solutions, so if you give it a completely
-   blank board you will get 6,670,903,752,021,072,936,960 of them!
+   It finds all possible solutions, so if you give it
+   a completely blank input board it will try to generate
+   6,670,903,752,021,072,936,960 of them!
 
    L. Shustek, 6/19/2019
    
