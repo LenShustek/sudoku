@@ -14,8 +14,8 @@
 
    L. Shustek, 6/19/2019
    
-   
-C:\data\projects\sudoku\Release> sudoku <test.txt
+
+C:\data\projects\sudoku\Release>sudoku <test.txt
 Sodoku solver
 
 input board:
@@ -43,7 +43,7 @@ solution 1:
 6 9 2 | 1 5 7 | 4 8 3
 3 4 7 | 6 2 8 | 1 5 9
 5 8 1 | 4 9 3 | 2 7 6
-There was 1 solution
+There was 1 solution found with 12 guesses and 6-deep recursion.
 
 input board:
     3 |       |
@@ -94,4 +94,5 @@ solution 3:
 9 1 7 | 8 2 3 | 5 4 6
 3 4 8 | 6 1 5 | 7 2 9
 2 5 6 | 7 4 9 | 8 1 3
-There were 3 solutions
+There were 3 solutions found with 6 guesses and 3-deep recursion.
+
