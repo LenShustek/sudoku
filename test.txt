@@ -1,3 +1,7 @@
+#The wikipedia example: 1 solution found with no guessing
+. 115 123 157 216 241 259 265 329 338 386 418 456 493 514 548 563 591 617 652 696 726 772 788 844 851 869 895 958 987 999
+
+# This has 1 solution found with 12 guesses and 6-deep recursion.
 26 71
 87     1 
 1    5  2
@@ -8,7 +12,7 @@
  4     59
     93 76
 
-
+#This has 3 solutions found with 6 guesses and 3-deep recursion.
   3      
 86 15    
    4 267 
@@ -18,3 +22,7 @@
  178 3   
     15 29
       8 3
+
+# Reportedly "the hardest one known for a human"
+# This has 1 solution found with 3598 guesses and 1799-deep recursion
+.118 233 246 327 359 372 425 467 554 565 577 641 683 731 786 798 838 845 881 929 974
