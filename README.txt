@@ -49,6 +49,7 @@ a completely blank input board it will try to generate
 L. Shustek, 6/19/2019
 Updated 6/23/2019
 
+
 C:\data\projects\sudoku\Debug>sudoku <test.txt
 Sodoku solver
 
@@ -80,7 +81,7 @@ solution 1:
 3 4 5 | 2 8 6 | 1 7 9
 There was 1 solution found with 0 guesses and 0 recursions of maximum depth 0.
 
-# This has 1 solution found with 12 guesses and 6-deep recursion.
+# This has 1 solution found after 12 guesses
 input board:
 2 6   | 7 1   |
 8 7   |       |   1
@@ -106,9 +107,9 @@ solution 1:
 6 9 2 | 1 5 7 | 4 8 3
 3 4 7 | 6 2 8 | 1 5 9
 5 8 1 | 4 9 3 | 2 7 6
-There was 1 solution found with 12 guesses and 6 recursions of maximum depth 5.
+There was 1 solution found with 12 guesses and 6 recursions of maximum depth 3.
 
-#This has 3 solutions found with 6 guesses and 3-deep recursion.
+#This has 3 solutions found after 6 guesses
 input board:
     3 |       |
 8 6   | 1 5   |
@@ -158,10 +159,10 @@ solution 3:
 9 1 7 | 8 2 3 | 5 4 6
 3 4 8 | 6 1 5 | 7 2 9
 2 5 6 | 7 4 9 | 8 1 3
-There were 3 solutions found with 6 guesses and 3 recursions of maximum depth 4.
+There were 3 solutions found with 6 guesses and 3 recursions of maximum depth 2.
 
 # Reportedly "the hardest one known for a human"
-# This has 1 solution found with 3598 guesses and 1799-deep recursion
+# This has 1 solution found after 3598 guesses
 input board:
 8     |       |
     3 | 6     |
@@ -187,5 +188,6 @@ solution 1:
 5 2 1 | 9 7 4 | 3 6 8
 4 3 8 | 5 2 6 | 9 1 7
 7 9 6 | 3 1 8 | 4 5 2
-There was 1 solution found with 3598 guesses and 1799 recursions of maximum depth 32.
+There was 1 solution found with 3598 guesses and 1799 recursions of maximum depth 21.
+
 
