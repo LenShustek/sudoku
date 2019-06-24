@@ -1,46 +1,46 @@
 
 Solve the classic 9x9 Sudoku puzzle
 
- Partially filled-out input boards are either compiled into the program
- or are read from the standard input file in the following format:
-   - before each board: empty lines, or comment lines starting with '#'
-   - each board can be in one of two formats:
-     -  9 lines, each with 9 characters that are the digits 1-9 or blank
-     -  1 line starting with '.', then multiple blank-separated 3-digit numbers
-        like "rcv", where r=row, c=col, v=value
+Partially filled-out input boards are either compiled into the program
+or are read from the standard input file in the following format:
+  - before each board: empty lines, or comment lines starting with '#'
+  - each board can be in one of two formats:
+    -  9 lines, each with 9 characters that are the digits 1-9 or blank
+    -  1 line starting with '.', then multiple blank-separated 3-digit numbers
+       like "rcv", where r=row, c=col, v=value for that cell
 
  A typical invocation from the command line might be:
      sudoku <test.txt
  where test.txt contains
 
-     #The wikipedia example: 1 solution found with no guessing
-     . 115 123 157 216 241 259 265 329 338 386 418 456 493 514 548 563 591 617 652 696 726 772 788 844 851 869 895 958 987 999
+    #The wikipedia example: 1 solution found with no guessing
+   . 115 123 157 216 241 259 265 329 338 386 418 456 493 514 548 563 591 617 652 696 726 772 788 844 851 869 895 958 987 999
 
-     # This has 1 solution found with 12 guesses and 6-deep recursion.
-     26 71
-     87     1
-     1    5  2
-     2   1 34
+   # This has 1 solution found after 12 guesses
+   26 71
+   87     1 
+   1    5  2
+    2   1 34
 
-     41 2   6
-     6  1    3
-     4     59
-     93 76
+   41 2   6 
+   6  1    3
+    4     59
+       93 76
 
-     #This has 3 solutions found with 6 guesses and 3-deep recursion.
-     3
-     86 15
-     4 267
-     89   2 1
-     381
-     7 1   48
-     178 3
-     15 29
-     8 3
+   #This has 3 solutions found after 6 guesses
+     3      
+   86 15    
+      4 267 
+    89   2 1
+      381   
+   7 1   48 
+    178 3   
+       15 29
+         8 3
 
-     # Reportedly "the hardest one known for a human"
-     # This has 1 solution found with 3598 guesses and 1799-deep recursion
-     .118 233 246 327 359 372 425 467 554 565 577 641 683 731 786 798 838 845 881 929 974
+   # Reportedly "the hardest one known for a human"
+   # This has 1 solution found after 3598 guesses
+   .118 233 246 327 359 372 425 467 554 565 577 641 683 731 786 798 838 845 881 929 974
 
 The program finds all possible solutions, so if you give it
 a completely blank input board it will try to generate
@@ -49,8 +49,7 @@ a completely blank input board it will try to generate
 L. Shustek, 6/19/2019
 Updated 6/23/2019
 
-
-C:\data\projects\sudoku\Release>sudoku <test.txt
+C:\data\projects\sudoku\Debug>sudoku <test.txt
 Sodoku solver
 
 #The wikipedia example: 1 solution found with no guessing
@@ -79,7 +78,7 @@ solution 1:
 9 6 1 | 5 3 7 | 2 8 4
 2 8 7 | 4 1 9 | 6 3 5
 3 4 5 | 2 8 6 | 1 7 9
-There was 1 solution found with 0 guesses and 0-deep recursion.
+There was 1 solution found with 0 guesses and 0 recursions of maximum depth 0.
 
 # This has 1 solution found with 12 guesses and 6-deep recursion.
 input board:
@@ -107,7 +106,7 @@ solution 1:
 6 9 2 | 1 5 7 | 4 8 3
 3 4 7 | 6 2 8 | 1 5 9
 5 8 1 | 4 9 3 | 2 7 6
-There was 1 solution found with 12 guesses and 6-deep recursion.
+There was 1 solution found with 12 guesses and 6 recursions of maximum depth 5.
 
 #This has 3 solutions found with 6 guesses and 3-deep recursion.
 input board:
@@ -159,7 +158,7 @@ solution 3:
 9 1 7 | 8 2 3 | 5 4 6
 3 4 8 | 6 1 5 | 7 2 9
 2 5 6 | 7 4 9 | 8 1 3
-There were 3 solutions found with 6 guesses and 3-deep recursion.
+There were 3 solutions found with 6 guesses and 3 recursions of maximum depth 4.
 
 # Reportedly "the hardest one known for a human"
 # This has 1 solution found with 3598 guesses and 1799-deep recursion
@@ -188,4 +187,5 @@ solution 1:
 5 2 1 | 9 7 4 | 3 6 8
 4 3 8 | 5 2 6 | 9 1 7
 7 9 6 | 3 1 8 | 4 5 2
-There was 1 solution found with 3598 guesses and 1799-deep recursion.
+There was 1 solution found with 3598 guesses and 1799 recursions of maximum depth 32.
+
